@@ -13,6 +13,15 @@ async function listInvoices() {
 	return data;
 }
 
+// async function listUserCredentials() {
+//     const data = await sql`
+//     SELECT email, password
+//     FROM users;
+//   `;
+//
+//     return data;
+// }
+
 export async function GET() {
   try {
   	return Response.json(await listInvoices());
