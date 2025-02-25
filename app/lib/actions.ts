@@ -130,7 +130,6 @@ export async function authenticate(
 ) {
     try {
         await signIn('credentials', formData);
-
         redirect('/dashboard');
     } catch (error) {
         if (error instanceof AuthError) {
